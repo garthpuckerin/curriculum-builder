@@ -7,6 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3.0] - 2025-02-18
+
+### Added
+
+- GIT_WORKFLOW.md "Required" section — workflow is mandatory, no direct commits to main/develop
+
+### Changed
+
+- Test coverage threshold 40% → 70%
+- Exclude thin wrappers (page, api-docs, openapi) from coverage
+
+### Fixed
+
+- Added 5 tests: simulate path, defaults, fetch throw, CurriculumBuilder success/error (13 total)
+
 ## [1.2.0] - 2025-02-18
 
 ### Added
