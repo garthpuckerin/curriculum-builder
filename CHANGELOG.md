@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- GIT_WORKFLOW.md — branch strategy, PR flow, release process
+- PULL_REQUEST_TEMPLATE.md for GitHub PRs
+
 ## [1.1.0] - 2025-02-18
 
 ### Added
