@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Security
+
+- Upgrade Next.js 14 → 15.5.12 (fixes DoS in Image Optimizer, RSC deserialization)
+- Upgrade eslint-config-next to 15.x (fixes glob command injection)
+- Add npm overrides for lodash (>=4.17.22) and tmp (>=0.2.4) to fix prototype pollution and arbitrary file write
+- Require Node.js >=20.9.0
+
 ## [1.0.0] - 2025-02-18
 
 ### Added
