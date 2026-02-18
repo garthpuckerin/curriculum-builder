@@ -14,25 +14,11 @@ For real Claude API calls, add `ANTHROPIC_API_KEY` to `.env.local` (copy from `.
 
 ## Branch Workflow
 
-- **main** — production-ready releases
-- **develop** — integration branch for features
-- **fix/\***, **feat/\*** — feature branches from develop
+See **[GIT_WORKFLOW.md](GIT_WORKFLOW.md)** for the full workflow.
 
-```bash
-git checkout develop
-git pull origin develop
-git checkout -b feat/my-feature   # or fix/my-fix
-
-# ... make changes, commit ...
-npm run validate
-
-git checkout develop
-git merge feat/my-feature
-git checkout main
-git merge develop
-# Update CHANGELOG, bump version, commit
-git tag v1.x.x
-```
+- **main** — production releases (tagged)
+- **develop** — integration branch
+- **feat/\***, **fix/\*** — feature branches from develop
 
 ## Commit Convention
 

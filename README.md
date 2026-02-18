@@ -120,7 +120,8 @@ ANTHROPIC_API_KEY=sk-ant-...
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for commit conventions and workflow.
+- [CONTRIBUTING.md](CONTRIBUTING.md) — setup, commit conventions
+- [GIT_WORKFLOW.md](GIT_WORKFLOW.md) — branch strategy, PR flow, release process
 
 ## Security
 
