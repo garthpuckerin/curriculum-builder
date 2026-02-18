@@ -12,6 +12,28 @@ npm run dev
 
 For real Claude API calls, add `ANTHROPIC_API_KEY` to `.env.local` (copy from `.env.example`).
 
+## Branch Workflow
+
+- **main** — production-ready releases
+- **develop** — integration branch for features
+- **fix/\***, **feat/\*** — feature branches from develop
+
+```bash
+git checkout develop
+git pull origin develop
+git checkout -b feat/my-feature   # or fix/my-fix
+
+# ... make changes, commit ...
+npm run validate
+
+git checkout develop
+git merge feat/my-feature
+git checkout main
+git merge develop
+# Update CHANGELOG, bump version, commit
+git tag v1.x.x
+```
+
 ## Commit Convention
 
 This project uses [Conventional Commits](https://www.conventionalcommits.org/) with [Commitlint](https://commitlint.js.org/) and [Commitizen](https://commitizen.github.io/cz-cli/).
