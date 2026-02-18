@@ -34,7 +34,7 @@
     "swagger-ui-react": "^5.11.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^18.4.0",
+    "@commitlint/cli": "^20.4.1",
     "@commitlint/cz-commitlint": "^18.4.0",
     "@commitlint/config-conventional": "^18.4.0",
     "@testing-library/jest-dom": "^6.2.0",
