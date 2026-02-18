@@ -2,6 +2,8 @@
 
 Generate structured training curricula with learning objectives, module breakdowns, activities, and assessments. Powered by Claude.
 
+**[Repository](https://github.com/garthpuckerin/curriculum-builder)** · **Deploy on [Vercel](https://vercel.com/new?filter=next.js&repository=https://github.com/garthpuckerin/curriculum-builder)**
+
 **Targets:** Docebo · Workday Learning · SuccessFactors · SCORM 2004 / xAPI
 
 ## Features
@@ -85,19 +87,11 @@ On `git commit`, Husky runs:
 
 ## Deploy (Vercel)
 
-```bash
-git init
-git add .
-npm run commit   # or: git commit -m "feat: initial curriculum builder"
-git remote add origin https://github.com/garthpuckerin/curriculum-builder.git
-git push -u origin main
-```
+1. [Import from GitHub](https://vercel.com/new?filter=next.js&repository=https://github.com/garthpuckerin/curriculum-builder)
+2. Add environment variable: `ANTHROPIC_API_KEY` = your API key
+3. Deploy
 
-Connect at [vercel.com/new](https://vercel.com/new). Add environment variable:
-
-```
-ANTHROPIC_API_KEY=sk-ant-...
-```
+Vercel will build from `main` and deploy on each push.
 
 ## Project Structure
 

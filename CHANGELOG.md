@@ -11,6 +11,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - GIT_WORKFLOW.md — branch strategy, PR flow, release process
 - PULL_REQUEST_TEMPLATE.md for GitHub PRs
+- Repository link and one-click Vercel deploy in README
+- package.json repository field
 
 ## [1.1.0] - 2025-02-18
 

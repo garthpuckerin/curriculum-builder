@@ -3,6 +3,10 @@
   "version": "1.1.0",
   "private": true,
   "description": "AI-Assisted Instructional Design — Generate structured training curricula for Docebo, Workday Learning, SuccessFactors",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/garthpuckerin/curriculum-builder.git"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
