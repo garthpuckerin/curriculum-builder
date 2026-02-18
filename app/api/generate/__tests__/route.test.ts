@@ -68,6 +68,66 @@ describe('POST /api/generate', () => {
     expect(data.error).toBe('Invalid API key');
   });
 
+  it('returns 200 with simulated curriculum when x-simulate header is sent', async () => {
+    const req = new Request('http://localhost/api/generate', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-simulate': 'true',
+      },
+      body: JSON.stringify({
+        prompt:
+          'Topic: Safety training\nTarget Audience: New Hires\nDelivery Format: eLearning\nTotal Duration: 60 minutes',
+      }),
+    });
+
+    const response = await POST(req as never);
+    const data = await response.json();
+
+    expect(response.status).toBe(200);
+    expect(data.content).toBeDefined();
+    const curriculum = JSON.parse(data.content[0].text);
+    expect(curriculum.title).toContain('Safety training');
+    expect(curriculum.modules).toHaveLength(4);
+  });
+
+  it('returns simulated curriculum with defaults when prompt has no matches', async () => {
+    const req = new Request('http://localhost/api/generate', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-simulate': 'true',
+      },
+      body: JSON.stringify({ prompt: 'minimal prompt' }),
+    });
+
+    const response = await POST(req as never);
+    const data = await response.json();
+
+    expect(response.status).toBe(200);
+    const curriculum = JSON.parse(data.content[0].text);
+    expect(curriculum.title).toContain('Sample Training Topic');
+    expect(curriculum.audience).toBe('New Hires');
+  });
+
+  it('returns 500 when fetch throws', async () => {
+    const consoleSpy = jest.spyOn(console, 'error').mockImplementation();
+    (global.fetch as jest.Mock).mockRejectedValueOnce(new Error('Network error'));
+
+    const req = new Request('http://localhost/api/generate', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ prompt: 'test prompt' }),
+    });
+
+    const response = await POST(req as never);
+    const data = await response.json();
+
+    expect(response.status).toBe(500);
+    expect(data.error).toBe('Internal server error');
+    consoleSpy.mockRestore();
+  });
+
   it('returns 200 with content when API succeeds', async () => {
     (global.fetch as jest.Mock).mockResolvedValueOnce({
       ok: true,

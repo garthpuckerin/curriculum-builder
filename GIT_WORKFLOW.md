@@ -1,5 +1,12 @@
 # Git Workflow
 
+## Required
+
+**All changes must follow this workflow.** No direct commits to `main` or `develop`.
+
+- Branch from `develop` → work on `feat/*` or `fix/*` → PR into `develop` → merge
+- Releases: merge `develop` → `main` → update CHANGELOG, bump version, tag
+
 ## Branch Strategy
 
 | Branch       | Purpose                                      |
