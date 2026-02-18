@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Simulated curriculum output in dev mode when `ANTHROPIC_API_KEY` is not set — test the UI without an API key
+- Optional `x-simulate: true` header to force mock response (for testing)
+
 ### Security
 
 - Upgrade Next.js 14 → 15.5.12 (fixes DoS in Image Optimizer, RSC deserialization)

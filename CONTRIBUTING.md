@@ -6,13 +6,11 @@
 # Install dependencies
 npm install
 
-# Copy environment template
-cp .env.example .env.local
-# Add your ANTHROPIC_API_KEY to .env.local
-
-# Start development server
+# Start development server (simulated output when no API key)
 npm run dev
 ```
+
+For real Claude API calls, add `ANTHROPIC_API_KEY` to `.env.local` (copy from `.env.example`).
 
 ## Commit Convention
 

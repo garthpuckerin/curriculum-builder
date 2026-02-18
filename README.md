@@ -12,6 +12,7 @@ Generate structured training curricula with learning objectives, module breakdow
 - LMS-ready output framing
 - 4 example prompts preloaded
 - Server-side API route — API key never exposed to client
+- **Simulated output in dev** — try the app without an API key
 - **OpenAPI/Swagger UI** at `/api-docs`
 - **Quality gates:** ESLint, Prettier, TypeScript, Jest
 - **Pre-commit hooks:** Husky + lint-staged + Commitlint
@@ -23,13 +24,16 @@ Generate structured training curricula with learning objectives, module breakdow
 # Install dependencies
 npm install
 
-# Copy environment and add your API key
-cp .env.example .env.local
-# Edit .env.local: ANTHROPIC_API_KEY=sk-ant-...
-
-# Run development server
+# Run development server (works without API key — uses simulated output)
 npm run dev
 # → http://localhost:3000
+```
+
+For real Claude-powered generation, add your API key:
+
+```bash
+cp .env.example .env.local
+# Edit .env.local: ANTHROPIC_API_KEY=sk-ant-...
 ```
 
 ## API Documentation

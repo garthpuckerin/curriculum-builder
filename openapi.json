@@ -18,8 +18,17 @@
     "/api/generate": {
       "post": {
         "summary": "Generate curriculum",
-        "description": "Generates a complete curriculum structure using Claude AI based on topic, audience, format, and duration parameters.",
+        "description": "Generates a complete curriculum structure using Claude AI based on topic, audience, format, and duration parameters. In development mode without an API key, or when x-simulate header is true, returns mock curriculum data.",
         "operationId": "generateCurriculum",
+        "parameters": [
+          {
+            "name": "x-simulate",
+            "in": "header",
+            "required": false,
+            "schema": { "type": "string", "enum": ["true"] },
+            "description": "Force mock response (for testing). In dev mode, mock is also returned when API key is not configured."
+          }
+        ],
         "requestBody": {
           "required": true,
           "content": {
