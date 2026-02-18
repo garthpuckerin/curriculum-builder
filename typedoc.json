@@ -1,0 +1,14 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "entryPoints": ["app"],
+  "entryPointStrategy": "expand",
+  "out": "docs",
+  "exclude": ["**/*.test.{ts,tsx}", "**/node_modules/**"],
+  "excludeExternals": true,
+  "plugin": [],
+  "readme": "README.md",
+  "includeVersion": true,
+  "categorizeByGroup": true,
+  "categoryOrder": ["API", "Components", "*"],
+  "sort": ["source-order"]
+}
