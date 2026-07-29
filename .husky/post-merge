@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# >>> mimir2 incremental re-ingest >>>
+_mimir2_body="$(git rev-parse --git-dir)/hooks/mimir-reingest.sh"
+if [ -x "$_mimir2_body" ]; then "$_mimir2_body"; fi
+# <<< mimir2 incremental re-ingest <<<
