@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # >>> mimir2 incremental re-ingest >>>
-_mimir2_body="$(git rev-parse --git-dir)/hooks/mimir-reingest.sh"
+_mimir2_common="$(git rev-parse --git-common-dir 2>/dev/null)" || exit 0
+_mimir2_body="$_mimir2_common/hooks/mimir-reingest.sh"
 if [ -x "$_mimir2_body" ]; then "$_mimir2_body"; fi
 # <<< mimir2 incremental re-ingest <<<
