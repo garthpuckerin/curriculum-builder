@@ -11,10 +11,28 @@
 
 ## Code Comprehension (Comprehension Ladder Standard)
 
+<!-- bcstd:managed comprehension v1 -->
+
 - Graph repo_id: `github.com/garthpuckerin/curriculum-builder`
 - Ladder-first: query the mimir2-graph MCP ladder (`map` / `find` / `explain` /
-  `neighbors` / `read`) with the repo_id above BEFORE raw file reads or grep
-  for structure/behavior/relationship questions. Raw reads remain correct for
-  editing, ungraphed repos, non-code content, and exact-line verification.
-  Canonical text: `standards/Comprehension_Ladder_Standard.md` in
-  blurred-concepts-engineering — it governs on any conflict.
+`neighbors` / `read`) with the repo_id above BEFORE raw file reads or grep
+for structure/behavior/relationship questions. Raw reads remain correct for
+editing, ungraphed repos, non-code content, and exact-line verification.
+Canonical text: `standards/Comprehension_Ladder_Standard.md` in
+blurred-concepts-engineering — it governs on any conflict.
+<!-- /bcstd:managed -->
+
+## Institutional Memory
+
+<!-- bcstd:managed memory v1 -->
+
+- The comprehension and memory habits are active client bindings, not passive
+  repository guidance. Each client must use the highest enforcement tier it
+  supports under the Comprehension Ladder Standard.
+- Recall Ogham with `hybrid_search` when starting work on a system that may
+  have prior context. Before ending, store decisions with rationale, gotchas,
+  and cross-session operational context with source, controlled tags, and a
+  deliberate TTL. Never store secrets or code-structure facts.
+- Canonical memory policy: `standards/Memory_Standard.md` in
+blurred-concepts-engineering — it governs on any conflict.
+<!-- /bcstd:managed -->
